@@ -1,0 +1,18 @@
+[package]
+name = "kommy"
+version = "0.0.1"
+authors = ["chikof"]
+edition = "2024"
+repository = "https://chikof/kommy"
+license = "MIT"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = "symbols"
+panic = "abort"
+
+[dependencies]
+wooting-rgb = "=0.3.6"
+ctrlc = "=3.5.2"
